@@ -8,6 +8,8 @@ img {
 }
 
 a {
+    display: flex;
+    align-items: center;
     color: yellow;
     font-size: 60px;
     text-decoration: none;
@@ -48,14 +50,26 @@ body {
 
 #selfie {
     border-radius: 50%;
-    padding: 10px;
+    padding: 4px;
+    background-color: white;
+    margin: 6px;
 }
 
 #about_me p {
     max-width: 50vw;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    /* background-color: aqua; */
     align-items: center;
+    margin: auto;
+}
+
+@media all and (orientation: portrait) {
+    #nav_headers {
+        display: none;
+    }
+
+}
+
+#nav_headers a {
+    font-size: 30px;
 }
