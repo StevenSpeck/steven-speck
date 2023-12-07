@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="styling.css">
 </head>
 <body id="page_container">
+  <div id="transition"></div>
   <div id="header">
     <nav id="title_icon">
-      <img id="selfie" src="selfie.jpg" href="/steven-speck">
-      <a href="/steven-speck">STEVEN SPECK</a>
+      <img id="selfie" src="selfie.jpg" href="/steven-speck" title="My face!">
+      <a href="/steven-speck" id="desktop" title="My name!">STEVEN SPECK</a>
+      <a href="/steven-speck" id="mobile" title="My name!">STEVEN</a>
     </nav>
     <nav id="nav_headers">
       <a href="/steven-speck">Posts</a>
@@ -20,20 +22,25 @@
       <a href="/steven-speck">Contact</a>
     </nav>
   </div>
-  <div id="header_transition"></div>
-  <p id="update_time"></p>
-  <div id="about_me">
-    <h1>
-      About
-    </h1> 
-    <p> 
-        Hello! 
-        My name is Steven Speck and I am a professional software engineer.  
-        Most recently I worked for 18 months at a digital government consultancy.  
-        I hope to blend my interests and skillsets to develop tools and non-addictive platforms for good. 
-    </p>
+  <div id="transition"></div>
+  <div id="content_container">
+    <p id="update_time"></p>
+    <div id="about_me">
+      <h1>
+        About
+      </h1> 
+     <p> 
+          Hello! 
+          My name is Steven Speck and I am a professional software engineer.  
+          Most recently I worked for 18 months at a digital government consultancy.  
+          I hope to blend my interests and skillsets to develop tools and non-addictive platforms for good. 
+      </p>
+      <hr>
+    </div>
   </div>
-  <div id="footer"></div>
+  <div id="footer">
+    <p>est. 2023</p>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
