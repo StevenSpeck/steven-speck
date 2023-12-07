@@ -1,5 +1,7 @@
 img {
- max-width: 100px;
+ /* max-width: 100px; */
+ height: auto;
+ width: auto;
 }
 
 #page_container {
@@ -33,9 +35,7 @@ nav {
     width: 100%;
 }
 
-#header_transition {
-    margin: 0;
-    padding: 0;
+#transition {
     background-color: teal;
     height: 5px;
     width: 100%;
@@ -68,7 +68,7 @@ body {
     padding: 20px;
     width: 50vw;
     margin: auto;
-    border-radius: 10%;
+    border-radius: 50px;
     color: white;
 }
 
@@ -89,14 +89,33 @@ body {
     margin: auto;
     padding: 20px;
     text-decoration: overline;
+    color: white;
+}
+
+#about_me > hr {
+    margin: 10px;
 }
 
 @media all and (orientation: portrait) {
     #nav_headers {
         display: none;
     }
-
+    #title_icon > #desktop {
+        display: none;
+    }
 }
+
+@media all and (orientation: landscape) {
+    #title_icon > #mobile {
+        display: none;
+    } 
+}
+
+/* @media (max-width: 1000px) {
+    #title-icon a {
+        display:none;
+    }
+} */
 
 #nav_headers a {
     font-size: 30px;
@@ -106,4 +125,27 @@ body {
     height: 10px;
     margin: 10px;
     padding: 10px;
+}
+
+#footer > p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    color: teal;
+    padding: 10px;
+    margin: 10px;
+}
+
+#content_container {
+    /* color: black;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    more work needed to place footer transition just above the footer
+    height: 70vh; */
+}
+
+#nav_headers a {
+    color: white;
 }
