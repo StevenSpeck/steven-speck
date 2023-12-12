@@ -6,4 +6,4 @@
 - [ ] Local version works on desktop
 - [ ] Local version works on mobile
 - [ ] If it involves javascript, then there is testing
-- [ ] Updated last updated field
+- [ ] Updated "last updated" field
