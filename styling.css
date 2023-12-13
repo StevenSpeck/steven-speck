@@ -4,6 +4,15 @@
     max-width: 100vw;
 }
 
+#hamburger {
+    background-color: white; 
+    border-radius: 10%; 
+    display:flex; 
+    align-items: center;  
+    margin: 30px; 
+    padding: 4px;
+}
+
 a {
     display: flex;
     align-items: center;
@@ -85,7 +94,10 @@ body {
 @media all and (orientation: landscape) {
     #title_icon > #mobile {
         display: none;
-    } 
+    }
+    #hamburger {
+        display: none;
+    }
 }
 
 /* @media (max-width: 1000px) {
