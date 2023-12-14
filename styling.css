@@ -1,3 +1,36 @@
+#page_content {
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+}
+
+ul > a > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 25%;
+    margin: 1px;
+}
+
+/* ul > a {
+    margin: 1px;
+}
+
+ul {
+    margin: 1px;
+} */
+
+#contact_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: auto;
+}
+
+#contact_list > li {
+    margin: 4px;
+}
+
 #dropbtn {
     background-color: teal;
     color: white;
@@ -62,27 +95,6 @@
     max-width: 100vw;
 }
 
-/* #menu_dropdown {
-    /* display: none; */
-    height: 50px;
-    width: 100px;
-    background-color: blue;
-    transition: height 1s 0s;
-}
-
-#menu_dropdown:active {
-    height:100px;
-} */
-
-#hamburger {
-    background-color: teal; 
-    border-radius: 10%; 
-    display:flex; 
-    align-items: center;  
-    margin: 30px; 
-    padding: 4px;
-}
-
 a {
     display: flex;
     align-items: center;
@@ -98,7 +110,7 @@ nav {
     justify-content: flex-end;
 }
 
-#transition {
+.transition {
     background-color: teal;
     height: 5px;
     width: 100%;
@@ -173,12 +185,6 @@ body {
       }
 }
 
-/* @media (max-width: 1000px) {
-    #title-icon a {
-        display:none;
-    }
-} */
-
 #nav_headers a {
     font-size: 30px;
 }
@@ -199,15 +205,6 @@ body {
     margin: 10px;
 }
 
-#content_container {
-    /* color: black;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    more work needed to place footer transition just above the footer
-    height: 70vh; */
-}
-
 #nav_headers a {
     color: white;
 }
@@ -223,7 +220,6 @@ body {
     width: 100%;
 } 
 
-/* max-width: 100px; */
 img {
     height: auto;
     width: auto;
