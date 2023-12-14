@@ -6,4 +6,4 @@ function setLastUpdateText() {
     "Last updated " + days_since_last_edit + " days ago";
 }
 
-setTimeout(setLastUpdateText, 500);
+setTimeout(setLastUpdateText, 50);
