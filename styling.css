@@ -190,7 +190,9 @@ hr:first-child {
 
 #nav_headers a {
     font-size: 30px;
+    color: white;
 }
+
 
 #update_time {
     height: 10px;
@@ -206,10 +208,6 @@ hr:first-child {
     color: teal;
     padding: 10px;
     margin: 10px;
-}
-
-#nav_headers a {
-    color: white;
 }
 
 #header {
