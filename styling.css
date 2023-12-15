@@ -143,18 +143,22 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+    padding: 20px;
 }
 
 #about_me > h1 {
     align-items: center;
     margin: auto;
     padding: 20px;
-    text-decoration: overline;
     color: white;
 }
 
 #about_me > hr {
     margin: 10px;
+}
+
+hr:first-child {
+    width: 30%;
 }
 
 @media all and (max-width: 974px) {
