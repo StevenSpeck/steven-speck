@@ -160,14 +160,14 @@ body {
 #post_content {
     background-color: #353a3b;
     padding: 20px;
-    width: 50vw;
+    width: 75vw;
     margin: auto;
     border-radius: 50px;
     color: white;
 }
 
 #post_content > * {
-    max-width: 50vw;
+    max-width: 75vw;
     display: flex;
     margin: auto;
 }
