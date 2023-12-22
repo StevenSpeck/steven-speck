@@ -44,11 +44,22 @@
         </h1>
         <h2>released 12/20/2023</h2>
         <div id="input_table">
-          <input type="number" value="200" id="squat"/>
-          <input type="number" value="100" id="bench"/>
-          <input type="number" value="300" id="deadlift"/>
-          <input type="radio"/>
-          <input type="button">Search</input>
+          <div id="numerical_inputs">
+            <label for="squat">Squat</label>
+            <input type="number" value="200" id="squat"/>
+            <label for="bench">Bench</label>
+            <input type="number" value="100" id="bench"/>
+            <label for="deadlift">Deadlift</label>
+            <input type="number" value="300" id="deadlift"/>
+          </div>
+          <div id="selector_inputs"><input type="radio" id="ungendered" name="gender" value="ungendered" checked/>
+            <label for="ungendered">Ungendered</label>
+            <input type="radio" id="male" name="gender" value="male"/>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"/>
+            <label for="female">Female</label>
+          </div>
+          <button id="search">Search</button>
         </div>
         <div id="top_ten_matches"></div>
       <hr>
