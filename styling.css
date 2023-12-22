@@ -265,3 +265,38 @@ img {
     margin: 6px;
     max-width: 80px;
 }
+
+#input_table {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* margin: 10px; */
+}
+
+#numerical_inputs {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+}
+
+#numerical_inputs > * {
+    margin: 20px;
+    padding: 10px;
+}
+
+#selector_inputs {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+}
+
+#search {
+    width: 100px;
+    margin: 50px;
+}
+
+
+#input_table > div {
+    padding: 10px;
+    background-color: black;
+}
