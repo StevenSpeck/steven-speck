@@ -43,7 +43,8 @@
           Your Powerlifting Twin
         </h1>
         <h2>released 12/20/2023</h2>
-        <div id="input_table">
+        <fieldset id="input_table">
+          <legend>Input Powerlifting Numbers Here:</legend>
           <div id="numerical_inputs">
             <label for="squat">Squat</label>
             <input type="number" value="200" id="squat"/>
@@ -52,7 +53,8 @@
             <label for="deadlift">Deadlift</label>
             <input type="number" value="300" id="deadlift"/>
           </div>
-          <div id="selector_inputs"><input type="radio" id="ungendered" name="gender" value="ungendered" checked/>
+          <div id="selector_inputs">
+            <input type="radio" id="ungendered" name="gender" value="ungendered" checked/>
             <label for="ungendered">Ungendered</label>
             <input type="radio" id="male" name="gender" value="male"/>
             <label for="male">Male</label>
@@ -60,7 +62,7 @@
             <label for="female">Female</label>
           </div>
           <button id="search">Search</button>
-        </div>
+        </fieldset>
         <div id="top_ten_matches"></div>
       <hr>
       </div>
