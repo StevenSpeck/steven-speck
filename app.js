@@ -1,6 +1,6 @@
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
-    (Date.now() - Date.parse("20 Dec 2023")) / (1000 * 60 * 60 * 24)
+    (Date.now() - Date.parse("3 Jan 2023")) / (1000 * 60 * 60 * 24)
   );
   const day_or_days = days_since_last_edit === 1 ? " day " : " days ";
   document.getElementById("update_time").innerHTML =
