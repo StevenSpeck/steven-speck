@@ -1,0 +1,31 @@
+/* .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+  } */
+
+.gradient_box {
+    background-color: #333333;
+    background-image: linear-gradient(to bottom left, red, yellow);
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 1rem;
+    font-size: large;
+  }
+
+.gradient_box h1 {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient_box h2 {
+  color: white;
+  padding: 2rem;
+  margin: 2rem;
+}
