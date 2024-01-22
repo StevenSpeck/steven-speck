@@ -1,0 +1,41 @@
+Thesis: GoingSemiPro is a platform for finding sports as an adult
+
+Problem:
+        Bodies were meant to move.  Movement was basically the third thing we developed after reproduction and digestion- even brains were just a product of colocating
+    all of the sensory and motor neurons meant to correspond with small motor loops.  And even into the age of VR, deskjobs, and extremely fulfilling online lives there
+    is something special about getting out there and moving.  It's something that belongs in the hierarchy of biological needs- food, water, sleep, socialization, ...exercise.
+    And yet almost none of us get the exercise that we truly feel we need.  tk% of people say that they don't get as much as they would like.  The CDC says that around tk% of
+    people do reach the recommended number of steps.  And it's totally understanbable why not.  Cities and towns are not typically built to support being active in day-to-day
+    living.  If all of your daylight hours are spent homemaking or breadwinning then that leaves just a few hours of darkness, if you're lucky, to get outside and expend some 
+    energy.  And one hour doesn't seem like a lot relative to 24 hours, but compared to the 4 or 5 hours that you truly have available to spend with yourself or your loved 
+    ones it is an extremely high price to pay, even if the benefits are a longer and more able life.
+
+Solution:
+        So what is the solution?  Well for one population, the solution is clear- competitive sports.  The population is kids.  Growing up there was always a sports or gym-class
+    requirement.  The kids who did sports sometimes hated the one that they were doing, but would almost always be able to find one that they genuinely enjoyed.  The ones who
+    had to do a gym class almost always hated the experience.  There was no pretending you were one of your heroes, or progressing at any one measureable skill, and no reinforce-
+    ment from peers that this was an enjoyable thing to be doing.  For the kids in sports where there was a next level, college, they pursued their vice with even greater
+    enthusiasm, often continuing their craft even if they failed to make it to the NCAA, instead participating in club volleyball, fun runs, or pickup basketball.  I would
+    love to bring this same set of incentives to adults.
+
+        My solution is to use technology to make it easier for people to find competitive sports- ones in which there is a scalable level of competition from casual beginner all
+    the way up to a national champion, all within a single league.  Many of these leagues already exist, but from a technology standpoint do not have an easily found presence,
+    easily searchable database, or simply lack a community around an already existing great set of resources.  This is not to say that a great league exists for all sports.
+    Equipment-heavy sports like American football find many challenges existing at anything other than the professional level and the younger leagues that feed into them.  And
+    even ones that are extremely popular and equipment-light, such as Basketball, do not have any singular leagues that offer local, state-level, and national competitions for
+    adults.  But for the ones that do, we will find them, and make them even easier for you to find as well.
+
+Technology:
+        The initial service we hope to bring is a sort of Wikipedia for the different leagues that exist in target sports.  This is a pretty easy thing to build, and just requires
+    some research, a little HTML, and a little CSS.  We will be using a NextJS framework in order to be able to use the Material UI design system while anticipating future dynamic
+    features.
+
+        Next we will be adding in search features to sort through a small number of national-level events for the leagues and sports that we have decided to support.  This 
+    decision was made in order to have an MVP for searching.  The true value will be in making any one sport extremely searchable for local events, which is the next task.  Once
+    the scope grows from dozens to hundreds of events being searchable, a PostgreSQL database will be employed.  This will make the jump to the next step easier- the creation of
+    accounts that allows for the saving and upvoting of events.  Later on we hope to allow users to submit events and to comment on any details they figure out about said events
+    such as parking, culture, or any points of dissatisfcation.
+
+        An effort that will almost certainly require a ton of maintence is the automation of event creation.  Anticipating that all of these events will populate different
+    platforms and that all of these platforms will evolve over time, this is not currently a prioritized piece of our plan.  However in cases where we believe this approach can yiled
+    sustained benefits we will put in every effort to support this. 
