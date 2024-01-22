@@ -39,3 +39,5 @@ Technology:
         An effort that will almost certainly require a ton of maintence is the automation of event creation.  Anticipating that all of these events will populate different
     platforms and that all of these platforms will evolve over time, this is not currently a prioritized piece of our plan.  However in cases where we believe this approach can yiled
     sustained benefits we will put in every effort to support this. 
+
+The initial stages of this platform exist at https://www.goingsemi.pro.  Please visit and give us feedback on how we can help you with your fitness journey.
