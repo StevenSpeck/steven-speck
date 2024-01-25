@@ -176,6 +176,7 @@ body {
     align-items: center;
     margin: auto;
     padding: 20px;
+    text-indent: 50px;
 }
 
 #post_content > h1,h2 {
@@ -299,4 +300,11 @@ img {
 #input_table > div {
     padding: 10px;
     background-color: black;
+}
+
+#thesis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
 }
