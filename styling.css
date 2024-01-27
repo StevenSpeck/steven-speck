@@ -300,3 +300,12 @@ img {
     padding: 10px;
     background-color: black;
 }
+
+ol {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    width: 200px;
+}

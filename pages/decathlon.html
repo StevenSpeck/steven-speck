@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steven Speck | Posts</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="../images/selfie.jpg">
+  <link rel="stylesheet" href="../styling.css">
+</head>
+<body id="page_container">
+  <div class="transition"></div>
+  <div id="header">
+    <nav id="title_icon">
+      <a href="/steven-speck" class="image_wrapper">
+        <img id="selfie" src="../images/selfie.jpg" href="/steven-speck" title="My face!">
+      </a>
+      <a href="/steven-speck" id="desktop" title="My name!">STEVEN SPECK</a>
+      <a href="/steven-speck" id="mobile" title="My name!">STEVEN</a>
+    </nav>
+    <nav id="nav_headers">
+      <a href="/steven-speck/pages/posts">Posts</a>
+      <a href="/steven-speck/pages/tools">Tools</a>
+      <a href="/steven-speck/pages/contact">Contact</a>
+    </nav>
+    <div class="dropdown">
+      <input id="dropcheck" type="checkbox">
+      <label for="dropcheck" id="dropbtn"><img src="../images/Hamburger_icon.svg"></label>
+      <div id="dropdown-content">
+        <a href="/steven-speck">Home</a>
+        <a href="/steven-speck/pages/posts">Posts</a>
+        <a href="/steven-speck/pages/tools">Tools</a>
+        <a href="/steven-speck/pages/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="transition"></div>
+  <div id="page_content">  
+    <p id="update_time"></p>
+      <div id="post_content">
+        <hr>
+        <h1>
+          Title
+        </h1>
+        <h2>Author and Date</h2>
+        <p>Content</p>
+        <h4>Day 1 Events</h4>
+        <ol>
+          <li><p>100m (s)</p><input value="10.0" id="100_perf"></input><p id="100_score">0</p></li>
+          <li><p>Long Jump (cm)</p><input value="800"></input></li>
+          <li><p>Shot Put (m)</p><input value="18"></input></li>
+          <li><p>High Jump (cm)</p><input value="230"></input></li>
+          <li><p>400m (s)</p><input value="44.50"></input></li>
+        </ol>
+        <button onclick=calculateEventScores>Calculate</button>
+        <!-- <h4>Day 2 Events</h4>
+        <ol>
+          <li><p>110m Hurdles (s)</p><input value="13.0"></input></li>
+          <li><p>Discus (m)</p><input value="60"></input></li>
+          <li><p>Pole Vault (cm)</p><input value="550"></input></li>
+          <li><p>Javelin (m)</p><input value="70"></input></li>
+          <li><p>1500m (s)</p><input value="240"></input></li>
+        </ol>  -->
+      <hr>
+      </div>
+  </div>
+  <!-- <div id="footer">
+    <p>est. 2023</p>
+  </div> -->
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>
