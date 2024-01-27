@@ -23,11 +23,22 @@ function calculateEventScores() {
     perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
   };
 
-  const performance = document.getElementById("100_perf").value;
   if (formula_values.perf_100.space === "track") {
-    document.getElementById("100_score").value = Math.round(
-      (formula_values.perf_100.A * (formula_values.perf_100.B - performace)) ^
-        formula_values.perf_100.C
+    document.getElementById("100_score").innerText = Math.round(
+      formula_values.perf_100.A *
+        (formula_values.perf_100.B -
+          document.getElementById("100_perf").value) **
+          formula_values.perf_100.C
+    );
+  }
+  if (formula_values.perf_100.space === "field") {
+    document.getElementById("100_score").innerText = Math.round(
+      formula_values.perf_100.A *
+        (document.getElementById("100_perf").value -
+          formula_values.perf_100.B) **
+          formula_values.perf_100.C
     );
   }
 }
+
+setTimeout(calculateEventScores, 5000);
