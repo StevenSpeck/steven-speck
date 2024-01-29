@@ -302,6 +302,15 @@ img {
     background-color: black;
 }
 
+ol {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    width: 200px;
+}
+
 #thesis {
     display: flex;
     flex-direction: row;

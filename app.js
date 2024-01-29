@@ -8,3 +8,37 @@ function setLastUpdateText() {
 }
 
 setTimeout(setLastUpdateText, 50);
+
+function calculateEventScores() {
+  const formula_values = {
+    perf_100: { A: 25.4347, B: 18, C: 1.81, space: "track" },
+    perf_lj: { A: 0.14354, B: 220, C: 1.4, space: "field" },
+    perf_sp: { A: 51.39, B: 1.5, C: 1.05, space: "field" },
+    perf_hj: { A: 0.8465, B: 75, C: 1.42, space: "field" },
+    perf_400: { A: 1.53775, B: 82, C: 1.81, space: "track" },
+    perf_110: { A: 5.74352, B: 28.5, C: 1.92, space: "track" },
+    perf_dt: { A: 12.91, B: 4, C: 1.1, space: "field" },
+    perf_pv: { A: 0.2797, B: 100, C: 1.35, space: "field" },
+    perf_jt: { A: 10.14, B: 7, C: 1.08, space: "field" },
+    perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
+  };
+
+  if (formula_values.perf_100.space === "track") {
+    document.getElementById("100_score").innerText = Math.round(
+      formula_values.perf_100.A *
+        (formula_values.perf_100.B -
+          document.getElementById("100_perf").value) **
+          formula_values.perf_100.C
+    );
+  }
+  if (formula_values.perf_100.space === "field") {
+    document.getElementById("100_score").innerText = Math.round(
+      formula_values.perf_100.A *
+        (document.getElementById("100_perf").value -
+          formula_values.perf_100.B) **
+          formula_values.perf_100.C
+    );
+  }
+}
+
+setTimeout(calculateEventScores, 5000);
