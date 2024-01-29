@@ -176,6 +176,7 @@ body {
     align-items: center;
     margin: auto;
     padding: 20px;
+    text-indent: 50px;
 }
 
 #post_content > h1,h2 {
@@ -308,4 +309,11 @@ ol {
 
 li {
     width: 200px;
+}
+
+#thesis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
 }
