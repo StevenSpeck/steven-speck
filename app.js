@@ -1,6 +1,6 @@
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
-    (Date.now() - Date.parse("26 Jan 2024")) / (1000 * 60 * 60 * 24)
+    (Date.now() - Date.parse("30 Jan 2024")) / (1000 * 60 * 60 * 24)
   );
   const day_or_days = days_since_last_edit === 1 ? " day " : " days ";
   document.getElementById("update_time").innerHTML =
@@ -23,13 +23,24 @@ function calculateEventScores() {
     perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
   };
 
-  const event_list = ["100", "lj", "sp", "hj", "400"];
+  const event_list = [
+    "100",
+    "lj",
+    "sp",
+    "hj",
+    "400",
+    "110",
+    "dt",
+    "pv",
+    "jt",
+    "1500",
+  ];
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     const event = event_list[i];
 
     if (formula_values["perf_" + event].space === "track") {
-      document.getElementById("score_" + event).innerText = Math.round(
+      document.getElementById("score_" + event).value = Math.round(
         formula_values["perf_" + event].A *
           (formula_values["perf_" + event].B -
             document.getElementById("perf_" + event).value) **
@@ -37,7 +48,7 @@ function calculateEventScores() {
       );
     }
     if (formula_values["perf_" + event].space === "field") {
-      document.getElementById("score_" + event).innerText = Math.round(
+      document.getElementById("score_" + event).value = Math.round(
         formula_values["perf_" + event].A *
           (document.getElementById("perf_" + event).value -
             formula_values["perf_" + event].B) **
