@@ -46,13 +46,13 @@
         <p>Here is a basic calculator for determining how much you have scored in the decathlon.</p>
         <h4>Day 1 Events</h4>
         <ol>
-          <li><p>100m (s)</p><input value="10.0" id="100_perf"></input><p id="100_score">0</p></li>
-          <li><p>Long Jump (cm)</p><input value="800"></input></li>
-          <li><p>Shot Put (m)</p><input value="18"></input></li>
-          <li><p>High Jump (cm)</p><input value="230"></input></li>
-          <li><p>400m (s)</p><input value="44.50"></input></li>
+          <li><p>100m (s)</p><input value="10.0" id="perf_100"></input><p id="score_100"></p></li>
+          <li><p>Long Jump (cm)</p><input value="800" id="perf_lj"></input><p id="score_lj"></p></li>
+          <li><p>Shot Put (m)</p><input value="18" id="perf_sp"></input><p id="score_sp"></p></li>
+          <li><p>High Jump (cm)</p><input value="230" id="perf_hj"></input><p id="score_hj"></p></li>
+          <li><p>400m (s)</p><input value="44.50" id="perf_400"></input><p id="score_400"></p></li>
         </ol>
-        <button onclick=calculateEventScores>Calculate</button>
+        <button onclick=calculateEventScores()>Calculate</button>
         <!-- <h4>Day 2 Events</h4>
         <ol>
           <li><p>110m Hurdles (s)</p><input value="13.0"></input></li>
