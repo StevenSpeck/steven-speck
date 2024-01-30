@@ -23,22 +23,26 @@ function calculateEventScores() {
     perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
   };
 
-  if (formula_values.perf_100.space === "track") {
-    document.getElementById("100_score").innerText = Math.round(
-      formula_values.perf_100.A *
-        (formula_values.perf_100.B -
-          document.getElementById("100_perf").value) **
-          formula_values.perf_100.C
-    );
-  }
-  if (formula_values.perf_100.space === "field") {
-    document.getElementById("100_score").innerText = Math.round(
-      formula_values.perf_100.A *
-        (document.getElementById("100_perf").value -
-          formula_values.perf_100.B) **
-          formula_values.perf_100.C
-    );
+  const event_list = ["100", "lj", "sp", "hj", "400"];
+
+  for (let i = 0; i < 5; i++) {
+    const event = event_list[i];
+
+    if (formula_values["perf_" + event].space === "track") {
+      document.getElementById("score_" + event).innerText = Math.round(
+        formula_values["perf_" + event].A *
+          (formula_values["perf_" + event].B -
+            document.getElementById("perf_" + event).value) **
+            formula_values["perf_" + event].C
+      );
+    }
+    if (formula_values["perf_" + event].space === "field") {
+      document.getElementById("score_" + event).innerText = Math.round(
+        formula_values["perf_" + event].A *
+          (document.getElementById("perf_" + event).value -
+            formula_values["perf_" + event].B) **
+            formula_values["perf_" + event].C
+      );
+    }
   }
 }
-
-setTimeout(calculateEventScores, 5000);
