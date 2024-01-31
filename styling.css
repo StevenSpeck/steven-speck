@@ -271,7 +271,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* margin: 10px; */
 }
 
 #numerical_inputs {
@@ -302,10 +301,17 @@ img {
     background-color: black;
 }
 
-ol {
-    display: grid;
-    padding: 1rem;
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
+ul > li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
 }
 
 .results_table > * {
@@ -330,4 +336,16 @@ ol {
     border-radius: 10px;
     background-color: teal;
     font-weight: 900;
+}
+
+input {
+    width: 8rem;
+}
+
+.results_table {
+    padding-bottom: 1rem;
+}
+
+#total {
+    height: 1rem;
 }
