@@ -1,6 +1,6 @@
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
-    (Date.now() - Date.parse("30 Jan 2024")) / (1000 * 60 * 60 * 24)
+    (Date.now() - Date.parse("31 Jan 2024")) / (1000 * 60 * 60 * 24)
   );
   const day_or_days = days_since_last_edit === 1 ? " day " : " days ";
   document.getElementById("update_time").innerHTML =
@@ -36,24 +36,32 @@ function calculateEventScores() {
     "1500",
   ];
 
+  let totalScore = 0;
+  let eventScore = 0;
+
   for (let i = 0; i < 10; i++) {
     const event = event_list[i];
 
     if (formula_values["perf_" + event].space === "track") {
-      document.getElementById("score_" + event).value = Math.round(
+      eventScore = Math.round(
         formula_values["perf_" + event].A *
           (formula_values["perf_" + event].B -
             document.getElementById("perf_" + event).value) **
             formula_values["perf_" + event].C
       );
+      document.getElementById("score_" + event).value = eventScore;
     }
     if (formula_values["perf_" + event].space === "field") {
-      document.getElementById("score_" + event).value = Math.round(
+      eventScore = Math.round(
         formula_values["perf_" + event].A *
           (document.getElementById("perf_" + event).value -
             formula_values["perf_" + event].B) **
             formula_values["perf_" + event].C
       );
+      document.getElementById("score_" + event).value = eventScore;
     }
+
+    totalScore += eventScore;
   }
+  document.getElementById("total").innerText = "Total: " + totalScore;
 }
