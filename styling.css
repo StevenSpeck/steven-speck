@@ -176,7 +176,7 @@ body {
     align-items: center;
     margin: auto;
     padding: 20px;
-    text-indent: 50px;
+    /* text-indent: 50px; */
 }
 
 #post_content > h1,h2 {
@@ -346,6 +346,14 @@ input {
     padding-bottom: 1rem;
 }
 
-#total {
+.total {
     height: 1rem;
+}
+
+#total_table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 1rem;
+    padding-bottom: 1rem;
 }
