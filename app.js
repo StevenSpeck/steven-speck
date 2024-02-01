@@ -1,6 +1,6 @@
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
-    (Date.now() - Date.parse("31 Jan 2024")) / (1000 * 60 * 60 * 24)
+    (Date.now() - Date.parse("1 Feb 2024")) / (1000 * 60 * 60 * 24)
   );
   const day_or_days = days_since_last_edit === 1 ? " day " : " days ";
   document.getElementById("update_time").innerHTML =
@@ -36,8 +36,14 @@ function calculateEventScores() {
     "1500",
   ];
 
+  const day_1_events = ["100", "lj", "sp", "hj", "400"];
+
+  const day_2_events = ["110", "dt", "pv", "jt", "1500"];
+
   let totalScore = 0;
   let eventScore = 0;
+  let day_1_score = 0;
+  let day_2_score = 0;
 
   for (let i = 0; i < 10; i++) {
     const event = event_list[i];
@@ -50,6 +56,7 @@ function calculateEventScores() {
             formula_values["perf_" + event].C
       );
       document.getElementById("score_" + event).value = eventScore;
+      console.log(eventScore);
     }
     if (formula_values["perf_" + event].space === "field") {
       eventScore = Math.round(
@@ -60,8 +67,17 @@ function calculateEventScores() {
       );
       document.getElementById("score_" + event).value = eventScore;
     }
-
+    if (day_1_events.includes(event)) {
+      day_1_score += eventScore;
+    }
+    if (day_2_events.includes(event)) {
+      day_2_score += eventScore;
+    }
     totalScore += eventScore;
   }
-  document.getElementById("total").innerText = "Total: " + totalScore;
+  document.getElementById("final_total").innerText = "Total: " + totalScore;
+  document.getElementById("day_1_total").innerText =
+    "Day 1 Total: " + day_1_score;
+  document.getElementById("day_2_total").innerText =
+    "Day 2 Total: " + day_2_score;
 }
