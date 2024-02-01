@@ -56,11 +56,11 @@
 
         <h4>Day 2 Events</h4>
         <ul class="results_table">
-          <li><p>110m Hurdles (s)</p><input type="number" pattern="[0-9]*" value="13.0" id="perf_110" onchange=calculateEventScores()></input><input id="score_110"></input></li>
-          <li><p>Discus (m)</p><input type="number" pattern="[0-9]*" value="60" id="perf_dt" onchange=calculateEventScores()></input><input id="score_dt"></input></li>
-          <li><p>Pole Vault (cm)</p><input type="number" pattern="[0-9]*" value="550" id="perf_pv" onchange=calculateEventScores()></input><input id="score_pv"></input></li>
+          <li><p>110m Hurdles (s)</p><input inputmode="decimal" type="number" pattern="[0-9]*" value="13.0" id="perf_110" onchange=calculateEventScores()></input><input id="score_110"></input></li>
+          <li><p>Discus (m)</p><input type="tel" value="60" id="perf_dt" onchange=calculateEventScores()></input><input id="score_dt"></input></li>
+          <li><p>Pole Vault (cm)</p><input type="tel" pattern="[0-9]*" value="550" id="perf_pv" onchange=calculateEventScores()></input><input id="score_pv"></input></li>
           <li><p>Javelin (m)</p><input type="number" pattern="[0-9]*" value="70" id="perf_jt" onchange=calculateEventScores()></input><input id="score_jt"></input></li>
-          <li><p>1500m (s)</p><input type="number" pattern="[0-9]*" value="240" id="perf_1500" onchange=calculateEventScores()></input><input id="score_1500"></input></li>
+          <li><p>1500m (s)</p><input type="decimal" value="240" id="perf_1500" onchange=calculateEventScores()></input><input id="score_1500"></input></li>
         </ul>
 
         <!-- <h4>Totals</h4>
