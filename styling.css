@@ -331,7 +331,7 @@ ul > li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 2rem;
     padding: 1rem;
     border-radius: 10px;
     background-color: teal;
@@ -356,4 +356,6 @@ input {
     justify-content: space-around;
     height: 1rem;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
