@@ -9,33 +9,33 @@ function setLastUpdateText() {
 
 setTimeout(setLastUpdateText, 50);
 
+const formula_values = {
+  perf_100: { A: 25.4347, B: 18, C: 1.81, space: "track" },
+  perf_lj: { A: 0.14354, B: 220, C: 1.4, space: "field" },
+  perf_sp: { A: 51.39, B: 1.5, C: 1.05, space: "field" },
+  perf_hj: { A: 0.8465, B: 75, C: 1.42, space: "field" },
+  perf_400: { A: 1.53775, B: 82, C: 1.81, space: "track" },
+  perf_110: { A: 5.74352, B: 28.5, C: 1.92, space: "track" },
+  perf_dt: { A: 12.91, B: 4, C: 1.1, space: "field" },
+  perf_pv: { A: 0.2797, B: 100, C: 1.35, space: "field" },
+  perf_jt: { A: 10.14, B: 7, C: 1.08, space: "field" },
+  perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
+};
+
+const event_list = [
+  "100",
+  "lj",
+  "sp",
+  "hj",
+  "400",
+  "110",
+  "dt",
+  "pv",
+  "jt",
+  "1500",
+];
+
 function calculateEventScores() {
-  const formula_values = {
-    perf_100: { A: 25.4347, B: 18, C: 1.81, space: "track" },
-    perf_lj: { A: 0.14354, B: 220, C: 1.4, space: "field" },
-    perf_sp: { A: 51.39, B: 1.5, C: 1.05, space: "field" },
-    perf_hj: { A: 0.8465, B: 75, C: 1.42, space: "field" },
-    perf_400: { A: 1.53775, B: 82, C: 1.81, space: "track" },
-    perf_110: { A: 5.74352, B: 28.5, C: 1.92, space: "track" },
-    perf_dt: { A: 12.91, B: 4, C: 1.1, space: "field" },
-    perf_pv: { A: 0.2797, B: 100, C: 1.35, space: "field" },
-    perf_jt: { A: 10.14, B: 7, C: 1.08, space: "field" },
-    perf_1500: { A: 0.03768, B: 480, C: 1.85, space: "track" },
-  };
-
-  const event_list = [
-    "100",
-    "lj",
-    "sp",
-    "hj",
-    "400",
-    "110",
-    "dt",
-    "pv",
-    "jt",
-    "1500",
-  ];
-
   const day_1_events = ["100", "lj", "sp", "hj", "400"];
 
   const day_2_events = ["110", "dt", "pv", "jt", "1500"];
@@ -56,7 +56,6 @@ function calculateEventScores() {
             formula_values["perf_" + event].C
       );
       document.getElementById("score_" + event).value = eventScore;
-      console.log(eventScore);
     }
     if (formula_values["perf_" + event].space === "field") {
       eventScore = Math.round(
@@ -80,4 +79,30 @@ function calculateEventScores() {
     "Day 1 Total: " + day_1_score;
   document.getElementById("day_2_total").innerText =
     "Day 2 Total: " + day_2_score;
+}
+
+function calculateEventPerformance() {
+  let performance = 0;
+  let score = 0;
+  for (let i = 0; i < 10; i++) {
+    const event = event_list[i];
+    score = document.getElementById("score_" + event).value;
+
+    if (formula_values["perf_" + event].space === "track") {
+      performance =
+        formula_values["perf_" + event].B -
+        (score / formula_values["perf_" + event].A) **
+          (1 / formula_values["perf_" + event].C);
+
+      document.getElementById("perf_" + event).value = performance;
+    }
+    if (formula_values["perf_" + event].space === "field") {
+      performance =
+        score /
+          formula_values["perf_" + event].A **
+            (1 / formula_values["perf_" + event].C) +
+        formula_values["perf_" + event].B;
+      document.getElementById("perf_" + event).value = performance;
+    }
+  }
 }
