@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steven Speck | Decathlon Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="../images/selfie.jpg">
+  <link rel="stylesheet" href="../styling.css">
+</head>
+<body id="page_container">
+  <div class="transition"></div>
+  <div id="header">
+    <nav id="title_icon">
+      <a href="/steven-speck" class="image_wrapper">
+        <img id="selfie" src="../images/selfie.jpg" href="/steven-speck" title="My face!">
+      </a>
+      <a href="/steven-speck" id="desktop" title="My name!">STEVEN SPECK</a>
+      <a href="/steven-speck" id="mobile" title="My name!">STEVEN</a>
+    </nav>
+    <nav id="nav_headers">
+      <a href="/steven-speck/pages/posts">Posts</a>
+      <a href="/steven-speck/pages/tools">Tools</a>
+      <a href="/steven-speck/pages/contact">Contact</a>
+    </nav>
+    <div class="dropdown">
+      <input id="dropcheck" type="checkbox">
+      <label for="dropcheck" id="dropbtn"><img src="../images/Hamburger_icon.svg"></label>
+      <div id="dropdown-content">
+        <a href="/steven-speck">Home</a>
+        <a href="/steven-speck/pages/posts">Posts</a>
+        <a href="/steven-speck/pages/tools">Tools</a>
+        <a href="/steven-speck/pages/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="transition"></div>
+  <div id="page_content">  
+    <p id="update_time"></p>
+      <div id="post_content">
+        <hr>
+        <h1>
+          Decathlon Calculator
+        </h1>
+        <h2>Steven Speck published January 26, 2024 (updated February 1, 2024)</h2>
+        <p>Here is a basic calculator for determining how much you have scored in the decathlon.</p>
+
+        <h4>Day 1 Events</h4>
+        <ul class="results_table">
+          <li><p>100m (s)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="10.0" id="perf_100" onchange=calculateEventScores()></input><input id="score_100"></input></li>
+          <li><p>Long Jump (cm)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="800" id="perf_lj" onchange=calculateEventScores()></input><input id="score_lj"></input></li>
+          <li><p>Shot Put (m)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="18" id="perf_sp" onchange=calculateEventScores()></input><input id="score_sp"></input></li>
+          <li><p>High Jump (cm)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="230" id="perf_hj" onchange=calculateEventScores()></input><input id="score_hj"></input></li>
+          <li><p>400m (s)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="44.50" id="perf_400" onchange=calculateEventScores()></input><input id="score_400"></input></li>
+        </ul>
+
+        <h4>Day 2 Events</h4>
+        <ul class="results_table">
+          <li><p>110m Hurdles (s)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="13.0" id="perf_110" onchange=calculateEventScores()></input><input id="score_110"></input></li>
+          <li><p>Discus (m)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="60" id="perf_dt" onchange=calculateEventScores()></input><input id="score_dt"></input></li>
+          <li><p>Pole Vault (cm)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="550" id="perf_pv" onchange=calculateEventScores()></input><input id="score_pv"></input></li>
+          <li><p>Javelin (m)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="70" id="perf_jt" onchange=calculateEventScores()></input><input id="score_jt"></input></li>
+          <li><p>1500m (s)</p><input inputmode="decimal" type="tel" pattern="[0-9]*" value="240" id="perf_1500" onchange=calculateEventScores()></input><input id="score_1500"></input></li>
+        </ul>
+
+        <!-- <h4>Totals</h4>
+        <ul class="results_table">
+          <li><p>Day 1</p><input value="13.0" id="perf_110" onchange=calculateEventScores()></li>
+          <li><p>Day 2</p><input value="60" id="perf_dt" onchange=calculateEventScores()></li>
+          <li><p>Overall</p><input value="550" id="perf_pv" onchange=calculateEventScores()></li>
+        </ul> -->
+        <div id="total_table">
+          <p clas="total" id="final_total"></p>
+          <p clas="total" id="day_1_total"></p>
+          <p clas="total" id="day_2_total"></p>
+        </div>
+        <button onclick=calculateEventScores() id="calculate_button">Calculate</button> 
+      <hr>
+      </div>
+  </div>
+  <!-- <div id="footer">
+    <p>est. 2023</p>
+  </div> -->
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>
