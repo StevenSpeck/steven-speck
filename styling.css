@@ -359,3 +359,10 @@ input {
     margin-bottom: 1rem;
 }
 
+
+.post_content {
+    border-radius: 25px;
+    background-color: teal;
+    margin: 1rem;
+    padding: 1rem;
+}
