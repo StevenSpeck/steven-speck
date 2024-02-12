@@ -115,6 +115,11 @@ function calculateEventPerformance() {
 }
 
 function arithmeticProblem() {
-  let firstTerm = 6;
-  let secondTerm = 7;
+  document.getElementById().innerHTML(<></>)
+
+  let i = 0;
+  for (let i = 0; i < 30, i++) {
+    let solved = document.getElementsByClassName("problem")
+    
+  }
 }
