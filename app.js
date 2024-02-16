@@ -1,6 +1,6 @@
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
-    (Date.now() - Date.parse("13 Feb 2024")) / (1000 * 60 * 60 * 24)
+    (Date.now() - Date.parse("16 Feb 2024")) / (1000 * 60 * 60 * 24)
   );
   const day_or_days = days_since_last_edit === 1 ? " day " : " days ";
   document.getElementById("update_time").innerHTML =
@@ -115,11 +115,10 @@ function calculateEventPerformance() {
 }
 
 function arithmeticProblem() {
-  document.getElementById().innerHTML(<></>)
+  document.getElementById().innerHTML(<></>);
 
   let i = 0;
-  for (let i = 0; i < 30, i++) {
-    let solved = document.getElementsByClassName("problem")
-    
+  for (let i = 0; i < 30; i++) {
+    let solved = document.getElementsByClassName("problem");
   }
 }
