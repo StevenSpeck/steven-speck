@@ -115,6 +115,10 @@ body {
 }
 
 #footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     background-color: #353a3b;
@@ -124,6 +128,12 @@ body {
     height: 50px; 
 }
 
+#footer > p {
+    color: teal;
+    padding: 10px;
+    margin: 10px;
+}
+
 #about_me {
     background-color: #353a3b;
     padding: 20px;
@@ -131,6 +141,7 @@ body {
     margin: auto;
     border-radius: 50px;
     color: white;
+    margin-top: 5rem;
 }
 
 #about_me > * {
@@ -224,23 +235,6 @@ hr:first-child {
 #nav_headers a {
     font-size: 30px;
     color: white;
-}
-
-
-#update_time {
-    height: 10px;
-    margin: 10px;
-    padding: 10px;
-}
-
-#footer > p {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    color: teal;
-    padding: 10px;
-    margin: 10px;
 }
 
 #header {
