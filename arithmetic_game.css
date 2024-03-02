@@ -366,3 +366,16 @@ input {
     margin: 1rem;
     padding: 1rem;
 }
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs_section {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    height: 2rem;
+}
