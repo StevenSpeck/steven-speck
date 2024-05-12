@@ -1,0 +1,179 @@
+* {
+    font-family: 'Inter'; 
+    /* font-size: 22px; */
+    color: white;
+}
+body {
+    background-color: black;
+}
+.about, .projects, .contact, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    display: inline-block;
+    position: relative;
+}
+h2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 1rem;
+    left: 1rem;
+    background: red;
+    z-index: -1;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    background-color: rgba(26, 26, 26, 0.25);
+    height: 100vh;
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.header > * {
+    font-size: 3rem;
+    animation-duration: 2s;
+
+}
+.header > *:nth-child(1){
+    animation-name: moveInLeft;
+}
+.header > *:nth-child(2){
+    animation-name: moveInRight;
+}
+.header > *:nth-child(3){
+    animation-name: moveInLeft;
+}
+.header > * > span {
+    color: red
+}
+.header > p {
+    background-color: red;
+    margin: 3px;
+    padding: 3px;
+}
+
+.navigation_bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.95);
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    height: 2rem;
+    /* width: 100vw; */
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    font-size: 22px;
+}
+.navigation_list {
+    display: flex;
+    flex-direction: row;
+}
+.navigation_item {
+    margin: 1rem;
+    list-style-type: none;
+}
+.navigation_item > a {
+    text-decoration: none;
+    transition: color 0.5s;
+}
+@media all and (max-width: 900px) {
+    .navigation_bar {
+        justify-content: center;
+    }
+}
+.navigation_item > a:hover {
+    color: red;
+}
+
+.about_profile_picture {
+    height: 192px;
+    width: 192px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: red;
+    margin: 6px;
+}
+.about_profile {
+    /* font-size: 1.8rem; */
+    width: 500px;
+    line-height: 1.8;
+}
+.resume {
+    width: 300px;
+}
+
+.projects {
+    display: none;
+}
+.navigation_item:nth-child(3) {
+    display: none;
+}
+
+.contact > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact > form > * {
+    margin: 3px;
+    padding: 3px;
+    width: 40rem;
+    color: black;
+}
+.contact > form > textarea {
+    height: 12rem;
+}
+
+
+footer {
+    background-color: rgba(40, 40, 40, 0.95);
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    margin: -8px;
+    padding: -8px;
+    margin-top: 5rem;
+}
+.links > img {
+    height: 60px;
+    width: 60px;
+    border-radius: 25%;
+    padding: 4px;
+    background-color: red;
+    margin-top: 10px;
+}
