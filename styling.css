@@ -1,11 +1,16 @@
 * {
     font-family: 'Inter'; 
-    /* font-size: 22px; */
     color: white;
 }
-body {
+
+body.dark_theme {
     background-color: black;
 }
+
+body {
+    background-color: white;
+}
+
 .about, .projects, .contact, footer {
     display: flex;
     flex-direction: column;
@@ -14,16 +19,44 @@ body {
 h2 {
     display: inline-block;
     position: relative;
+    font-size:xx-large
 }
-h2::before {
+body > * > h2::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 50%;
-    top: 1rem;
-    left: 1rem;
-    background: red;
+    top: 1.25rem;
+    left: 1.25rem;
+    background: pink;
     z-index: -1;
+}
+
+body.dark_theme > * > h2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 1.25rem;
+    left: 1.25rem;
+    background: #de3a3a;
+    z-index: -1;
+}
+section {
+    margin: 1rem;
+    padding: 1rem;
+}
+body > * > h1 {
+    color: black;
+}
+body.dark_theme > * > h1 {
+    color: white;
+}
+body > * > h2 {
+    color: rgba(40, 40, 40, 0.95);
+}
+body.dark_theme > * > h2 {
+    color: white;
 }
 
 
@@ -35,6 +68,7 @@ h2::before {
     font-size: 6rem;
     background-color: rgba(26, 26, 26, 0.25);
     height: 100vh;
+    margin: -8px -8px 0px -8px;
 }
 @keyframes moveInLeft {
     0% {
@@ -61,7 +95,6 @@ h2::before {
 .header > * {
     font-size: 3rem;
     animation-duration: 2s;
-
 }
 .header > *:nth-child(1){
     animation-name: moveInLeft;
@@ -73,14 +106,36 @@ h2::before {
     animation-name: moveInLeft;
 }
 .header > * > span {
-    color: red
+    color: #de3a3a;
 }
-.header > p {
-    background-color: red;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
+.header > a {
+    background-color: #de3a3a;;
+    border-radius: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in-out; 
 }
+a:hover {
+    transform: scale(1.05);
+}
+.header > a > p {
+    margin: 1rem;
+}
+body > .header {
+    background-color: white;
+}
+body.dark_theme > .header {
+    background-color:  rgba(40, 40, 40, 0.95);
+}
+body > .header > a > p {
+    color: rgba(40, 40, 40, 0.95);
+}
+body.dark_theme > .header > a > p {
+    color:white;
+}
+
 
 .navigation_bar {
     position: sticky;
@@ -93,10 +148,8 @@ h2::before {
     border-bottom: 1px solid #1a1a1a;
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-    height: 2rem;
-    /* width: 100vw; */
-    margin: 0;
-    padding: 0;
+    height: 3rem;
+    margin: 0px -8px 0px -8px;
     z-index: 99;
     font-size: 22px;
 }
@@ -105,7 +158,7 @@ h2::before {
     flex-direction: row;
 }
 .navigation_item {
-    margin: 1rem;
+    margin: 2rem;
     list-style-type: none;
 }
 .navigation_item > a {
@@ -118,25 +171,37 @@ h2::before {
     }
 }
 .navigation_item > a:hover {
-    color: red;
+    color: #de3a3a;;
 }
 
+
+
 .about_profile_picture {
-    height: 192px;
-    width: 192px;
+    height: 20rem;
+    width: 20rem;
     border-radius: 50%;
     padding: 4px;
-    background-color: red;
     margin: 6px;
 }
 .about_profile {
-    /* font-size: 1.8rem; */
     width: 500px;
     line-height: 1.8;
+    text-align: justify;
 }
 .resume {
     width: 300px;
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
+body > .about > p {
+    color: rgba(40, 40, 40, 0.95);
+}
+body.dark_theme > .about > p {
+    color: white;
+}
+
+
 
 .projects > div > img {
     border-radius: 25px;
@@ -144,20 +209,22 @@ h2::before {
     width: 350px;
 }
 
-.contact > form {
+
+.links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.contact > form > * {
-    margin: 3px;
-    padding: 3px;
-    width: 40rem;
-    color: black;
+.links > a > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 25%;
+    padding: 4px;
+    background-color: #de3a3a;;
+    margin: 10px;
+    transition: all .5s ease-in-out; 
 }
-.contact > form > textarea {
-    height: 12rem;
-}
+
 
 
 footer {
@@ -169,11 +236,48 @@ footer {
     padding: -8px;
     margin-top: 5rem;
 }
-.links > img {
-    height: 60px;
-    width: 60px;
-    border-radius: 25%;
-    padding: 4px;
+
+
+
+body.dark_theme > .lightmode {
+    height: 6rem;
+    width: 6rem;
+    background-color:cadetblue;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+body > .lightmode {
+    height: 6rem;
+    width: 6rem;
     background-color: red;
-    margin-top: 10px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+.lightmode > p {
+    opacity: 0%;
+    text-align: center;
+    padding: .6rem 0;
+    color: white;
+    transition: all .5s ease-in;
+    transition: all .1s ease-out;
+}
+body.dark_theme > .lightmode > p {
+    color: rgba(40, 40, 40, 0.95);
+}
+.lightmode:hover, .lightmode:hover > p {
+    transform: scale(1.1);
+    opacity: 100%;
 }
