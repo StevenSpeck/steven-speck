@@ -19,15 +19,15 @@ body {
 h2 {
     display: inline-block;
     position: relative;
-    font-size:xx-large
+    font-size:3rem;
 }
 body > * > h2::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 50%;
-    top: 1.25rem;
-    left: 1.25rem;
+    top: 1.75rem;
+    left: 1.75rem;
     background: pink;
     z-index: -1;
 }
@@ -37,8 +37,8 @@ body.dark_theme > * > h2::before {
     position: absolute;
     width: 100%;
     height: 50%;
-    top: 1.25rem;
-    left: 1.25rem;
+    top: 1.75rem;
+    left: 1.75rem;
     background: #de3a3a;
     z-index: -1;
 }
@@ -169,6 +169,9 @@ body.dark_theme > .header > a > p {
     .navigation_bar {
         justify-content: center;
     }
+    .about_profile {
+        width: 500px;
+    }
 }
 .navigation_item > a:hover {
     color: #de3a3a;;
@@ -184,9 +187,10 @@ body.dark_theme > .header > a > p {
     margin: 6px;
 }
 .about_profile {
-    width: 500px;
+    width: 700px;
     line-height: 1.8;
     text-align: justify;
+    font-size: 1.5rem;
 }
 .resume {
     width: 300px;
@@ -240,8 +244,8 @@ footer {
 
 
 body.dark_theme > .lightmode {
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
     background-color:cadetblue;
     position: fixed;
     bottom: 1rem;
@@ -252,8 +256,8 @@ body.dark_theme > .lightmode {
     transition: all .2s ease-in-out;
 }
 body > .lightmode {
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
     background-color: red;
     position: fixed;
     bottom: 1rem;
@@ -269,7 +273,7 @@ body > .lightmode {
 .lightmode > p {
     opacity: 0%;
     text-align: center;
-    padding: .6rem 0;
+    padding: 1.75rem 0;
     color: white;
     transition: all .5s ease-in;
     transition: all .1s ease-out;
