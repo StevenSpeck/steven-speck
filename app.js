@@ -1,3 +1,7 @@
+function lightMode() {
+  document.body.classList.toggle("dark_theme");
+}
+
 function setLastUpdateText() {
   const days_since_last_edit = Math.floor(
     (Date.now() - Date.parse("5 Mar 2024")) / (1000 * 60 * 60 * 24)
@@ -7,7 +11,7 @@ function setLastUpdateText() {
     "Last updated " + days_since_last_edit + day_or_days + "ago";
 }
 
-setTimeout(setLastUpdateText, 50);
+// setTimeout(setLastUpdateText, 50);
 
 const formula_values = {
   perf_100: { A: 25.4347, B: 18, C: 1.81, space: "track", D: 1 },
