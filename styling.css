@@ -206,7 +206,6 @@ body.dark_theme > .about > p {
 @media all and (max-width: 900px) {
     .about_profile {
         width: 300px;
-        color: blue;
         font-size: 1rem;
     }
 }
