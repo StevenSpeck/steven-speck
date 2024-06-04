@@ -48,9 +48,11 @@ section {
 }
 body > * > h1 {
     color: black;
+    text-align: center;
 }
 body.dark_theme > * > h1 {
     color: white;
+    text-align: center;
 }
 body > * > h2 {
     color: rgba(40, 40, 40, 0.95);
@@ -165,18 +167,14 @@ body.dark_theme > .header > a > p {
     text-decoration: none;
     transition: color 0.5s;
 }
+.navigation_item > a:hover {
+    color: #de3a3a;;
+}
 @media all and (max-width: 900px) {
     .navigation_bar {
         justify-content: center;
     }
-    .about_profile {
-        width: 500px;
-    }
 }
-.navigation_item > a:hover {
-    color: #de3a3a;;
-}
-
 
 
 .about_profile_picture {
@@ -191,6 +189,7 @@ body.dark_theme > .header > a > p {
     line-height: 1.8;
     text-align: justify;
     font-size: 1.5rem;
+    padding: 1rem;
 }
 .resume {
     width: 300px;
@@ -204,7 +203,12 @@ body > .about > p {
 body.dark_theme > .about > p {
     color: white;
 }
-
+@media all and (max-width: 900px) {
+    .about_profile {
+        width: 300px;
+        font-size: 1rem;
+    }
+}
 
 
 .projects > div > img {
@@ -219,14 +223,23 @@ body.dark_theme > .about > p {
     flex-direction: row;
     justify-content: space-between;
 }
-.links > a > img {
+body.dark_theme > .contact > .links > a > img {
     height: 100px;
     width: 100px;
     border-radius: 25%;
     padding: 4px;
-    background-color: #de3a3a;;
+    background-color: #de3a3a;
     margin: 10px;
-    transition: all .5s ease-in-out; 
+    transition: all .2s ease-in-out; 
+}
+body > .contact > .links > a > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 25%;
+    padding: 4px;
+    background-color: pink;
+    margin: 10px;
+    transition: all .2s ease-in-out; 
 }
 
 
