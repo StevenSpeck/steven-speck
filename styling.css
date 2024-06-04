@@ -1,6 +1,7 @@
 * {
     font-family: 'Inter'; 
     color: white;
+    transition: all 1s ease-in-out;
 }
 
 body.dark_theme {
@@ -47,8 +48,9 @@ section {
     padding: 1rem;
 }
 body > * > h1 {
-    color: black;
+    color: rgba(40, 40, 40, 0.95);
     text-align: center;
+    padding: 1rem;
 }
 body.dark_theme > * > h1 {
     color: white;
@@ -124,18 +126,13 @@ a:hover {
 }
 .header > a > p {
     margin: 1rem;
+    color:white;
 }
 body > .header {
     background-color: white;
 }
 body.dark_theme > .header {
     background-color:  rgba(40, 40, 40, 0.95);
-}
-body > .header > a > p {
-    color: rgba(40, 40, 40, 0.95);
-}
-body.dark_theme > .header > a > p {
-    color:white;
 }
 
 
@@ -223,6 +220,10 @@ body.dark_theme > .about > p {
     flex-direction: row;
     justify-content: space-between;
 }
+.links > * {
+    transition: all .1s ease-in-out;
+
+}
 body.dark_theme > .contact > .links > a > img {
     height: 100px;
     width: 100px;
@@ -230,7 +231,6 @@ body.dark_theme > .contact > .links > a > img {
     padding: 4px;
     background-color: #de3a3a;
     margin: 10px;
-    transition: all .2s ease-in-out; 
 }
 body > .contact > .links > a > img {
     height: 100px;
@@ -239,7 +239,6 @@ body > .contact > .links > a > img {
     padding: 4px;
     background-color: pink;
     margin: 10px;
-    transition: all .2s ease-in-out; 
 }
 
 
@@ -288,7 +287,6 @@ body > .lightmode {
     text-align: center;
     padding: 1.75rem 0;
     color: white;
-    transition: all .5s ease-in;
     transition: all .1s ease-out;
 }
 body.dark_theme > .lightmode > p {
@@ -297,4 +295,7 @@ body.dark_theme > .lightmode > p {
 .lightmode:hover, .lightmode:hover > p {
     transform: scale(1.1);
     opacity: 100%;
+}
+body.dark_theme > .lightmode:hover, body.dark_theme > .lightmode:hover > p {
+    opacity: 100%    
 }
