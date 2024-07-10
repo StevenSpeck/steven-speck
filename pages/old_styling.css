@@ -1,7 +1,7 @@
 * {
     font-family: 'Inter'; 
     transition: all 1s ease-in-out;
-    color: white;
+    /* color: white; */
 }
 
 body {
@@ -137,7 +137,7 @@ hr:first-child {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    background-color: #353a3b;
+    /* background-color: #353a3b; */
     height: 100px;
     width: 100%;
 } 
