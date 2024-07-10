@@ -1,3 +1,20 @@
+* {
+    font-family: 'Inter'; 
+    transition: all 1s ease-in-out;
+    color: white;
+}
+
+body {
+    background-color: white;
+}
+
+.about, .projects, .contact, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
 #page_content {
     margin: 0;
     padding: 10px;
@@ -23,90 +40,10 @@
     margin: 4px;
 }
 
-#dropbtn {
-    background-color: teal;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    position: relative;
-    cursor:pointer;
-    border-radius: 10%; 
-    display:flex; 
-    align-items: center;  
-    margin: 30px; 
-    padding: 8px;
-  }
-  
-  #dropdown {
-    position: relative;
-    display: inline;
-    float: right;
-    list-style: none;
-    padding: 0;
-    margin:0 20px 0 0;
-  }
-  
-  #dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: teal;
-    min-width: 160px;
-    left: auto;
-    right: 4px;
-    border-radius: 25px;
-  }
-  
-  #dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 48px;
-  }
-  
-  #dropdown-content a:hover {
-    background-color: teal;
-  }
-  
-  #dropcheck {
-      position: absolute;
-      left: -9999px;
-  }
-  
-  #dropcheck:checked ~ #dropdown-content {
-    display: block;
-  }
-  
-  #dropcheck:checked + #dropbtn {
-    background-color: aqua;
-  }
-
 #page_container {
     min-height: 100vh;
     position: relative;
     max-width: 100vw;
-}
-
-a {
-    display: flex;
-    align-items: center;
-    color: teal;
-    font-size: 60px;
-    text-decoration: none;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.transition {
-    background-color: teal;
-    height: 5px;
-    width: 100%;
 }
 
 body {
@@ -114,24 +51,14 @@ body {
     padding:0;
 }
 
-#footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    background-color: #353a3b;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px; 
-}
-
-#footer > p {
-    color: teal;
-    padding: 10px;
-    margin: 10px;
+footer {
+    background-color: rgba(40, 40, 40, 0.95);
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    margin: -8px;
+    padding: -8px;
+    margin-top: 5rem;
 }
 
 #about_me {
@@ -169,7 +96,7 @@ body {
 }
 
 #post_content {
-    background-color: #353a3b;
+    background-color: rgba(40, 40, 40, 0.95);
     padding: 20px;
     width: 75vw;
     margin: auto;
@@ -204,38 +131,6 @@ hr:first-child {
     width: 30%;
 }
 
-@media all and (max-width: 974px) {
-    #nav_headers {
-        display: none;
-    }
-    #title_icon > #desktop {
-        display: none;
-    }
-}
-
-@media all and (min-width: 974px) {
-    #title_icon > #mobile {
-        display: none;
-    }
-    #hamburger {
-        display: none;
-    }
-    #dropbtn {
-        display: none;
-      }
-}
-
-@media all and (max-width: 532px) {
-    #title_icon > #mobile {
-        display: none;
-    }
-}
-
-#nav_headers a {
-    font-size: 30px;
-    color: white;
-}
-
 #header {
     display: flex;
     flex-direction: row;
@@ -251,14 +146,6 @@ img {
     height: auto;
     width: auto;
 }  
-
-#selfie {
-    border-radius: 50%;
-    padding: 4px;
-    background-color: teal;
-    margin: 6px;
-    max-width: 80px;
-}
 
 #input_table {
     display: flex;
@@ -365,6 +252,39 @@ input {
     padding: 1rem;
 }
 
-.post_link {
-
+.navigation_bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.95);
+    border-bottom: 1px solid #1a1a1a;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    height: 3rem;
+    margin: 0px -8px 0px -8px;
+    z-index: 99;
+    font-size: 22px;
+}
+.navigation_list {
+    display: flex;
+    flex-direction: row;
+}
+.navigation_item {
+    margin: 2rem;
+    list-style-type: none;
+}
+.navigation_item > a {
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.navigation_item > a:hover {
+    color: #de3a3a;;
+}
+@media all and (max-width: 700px) {
+    .navigation_bar {
+        justify-content: center;
+    }
 }
